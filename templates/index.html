@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk File Encryptor/Decryptor</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold text-center mb-8">Bulk File Encryptor/Decryptor</h1>
+
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-semibold mb-4">Encrypt Files</h2>
+            <form action="/encrypt" method="POST" enctype="multipart/form-data" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">Select files to encrypt:</label>
+                    <input type="file" name="files" multiple required class="block w-full text-sm text-gray-600 border border-gray-300 rounded-lg p-2">
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600">Encrypt</button>
+            </form>
+        </div>
+
+        <div class="bg-white shadow-md rounded-lg p-6 mt-8">
+            <h2 class="text-2xl font-semibold mb-4">Decrypt Files</h2>
+            <form action="/decrypt" method="POST" enctype="multipart/form-data" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">Select files to decrypt:</label>
+                    <input type="file" name="files" multiple required class="block w-full text-sm text-gray-600 border border-gray-300 rounded-lg p-2">
+                </div>
+                <button type="submit" class="w-full bg-green-500 text-white font-semibold py-2 rounded-lg hover:bg-green-600">Decrypt</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
